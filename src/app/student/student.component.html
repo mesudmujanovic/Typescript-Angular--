@@ -1,0 +1,40 @@
+<div class="glavni"> 
+<div class="alert alert-primary">
+ <h3>Student:{{ime}}</h3>
+<div class="form-check">
+ <input type="checkbox" id="prosekCheck"
+ class="form-check-input"
+ (change)="onPromeniPrikazivanjeProseka()">
+<label for="prosekCheck">Prikazi Prosek</label>
+</div>
+
+
+<p *ngIf="prikaziProsek" >Prosek:{{ prosek() }}</p>
+<hr>
+<div class="form-group">
+ <label for="ocena">Dodaj Ocenu</label>
+ <input type="text"
+ id="ocena"
+ class="form-control" [(ngModel)]="ocenaStr">
+</div>
+
+<button class="btn btn-primary"
+(click)="onDodajOcenu()">Dodaj ocenu</button>
+
+<h6>Ocene:</h6>
+
+<p *ngFor="let ocenaIzNiza of ocene; let indeks = index">
+ {{indeks+1}}. ocena je {{ocenaIzNiza}}
+</p>
+
+<div [ngSwitch]="brojPolozenihPredmeta()">
+
+<div *ngSwitchCase="0">Nijedan predmet nije polozen</div>
+<div *ngSwitchCase="1">Uspesno polozen 1 predmet</div>
+<div *ngSwitchCase="2">Uspesno polozena 2 predmeta</div>
+<div *ngSwitchDefault>Polozen vise predmeta</div>
+
+</div>
+
+</div>
+</div>

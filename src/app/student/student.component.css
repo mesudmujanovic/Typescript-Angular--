@@ -1,0 +1,31 @@
+.glavni{
+ display: flex;
+ justify-content: center;
+ text-align:center;
+align-items: center;
+border: 10px solid blue;
+margin: 250px auto;
+}
+
+h6,p{
+ font-size: 20px;
+ border: 2px solid rgb(6, 6, 86);
+}
+h3{
+ font-family: 'Courier New', Courier, monospace;
+color:brown;
+}
+
+label{
+ color: brown;
+}
+
+button{
+ border: 3px solid blue;
+ border-radius: 10px;
+ color: aliceblue;
+ background: blue;
+}
+input{
+ background-color: antiquewhite;
+}
